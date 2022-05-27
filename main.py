@@ -5,9 +5,10 @@
 
 
 def find_anagram(word, anagram):
-    a = sorted(word.lower())
-    b = sorted(anagram.lower())
+    a = sorted(word.lower().replace(" ", ""))
+    b = sorted(anagram.lower().replace(" ", ""))
     return(a == b)
 
 print(find_anagram("ELbow", 'below'))
 print(find_anagram("hello", "check"))
+print(find_anagram("Dormitory", "Dirty Room"))
